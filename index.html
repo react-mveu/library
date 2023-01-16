@@ -1,37 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=1280, initial-scale=1.0">
-	<title>ContentShop - магазин контента.</title>
-	<link rel="stylesheet" type="text/css" href="src/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=10">
+    <title>Your title</title>    
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header>
-		<h1>ContentShop</h1>
-		<nav>
-			<p><a href="#">Музыка</a></p>
-			<p><a href="#">Видео</a></p>
-		</nav>
-	</header>
-	
-	<aside>
-		<h2>Разделы:</h2>
-		<ul>
-			<li><a href="#">Музыка</a></li>
-			<li><a href="#">Видео</a></li>
-		</ul>
-	</aside>
-	
-	<main>
-		<h1>Главная стрвница</h1>
-		<p>
-			Lorem ipsum dolor sit. Porttitor magna in ante ullamcorper feugiat leo ante consequat dictum netus vehicula felis et primis.
-		</p>
-	</main>
-	
-	<footer>
-		<p>Егор Гаврилов, 2022.</p>
-	</footer>
+    <div class="content-wrapper">
+        <header class="header">
+            <p style="font-size: 30px; margin: 0; padding: 10px 1em;">Header</p>
+        </header>
+
+        <div class="container clearfix">
+            <main class="content">
+                <!-- for-example -->
+                <p style="text-align: center; font-size: 30px; margin: 0; padding: 1.5em 0;">Hello, html!</p>
+            </main>
+            <aside class="sidebar sidebar1">
+                <p style="text-align: center;">sidebar 1</p>
+            </aside>
+        </div>
+
+        <footer class="footer">
+            <p style="font-size: 30px; margin: 0; padding: 10px 1em;">Footer</p>
+        </footer>
+    </div>  
 </body>
 </html>
