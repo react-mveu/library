@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: mysql-server
--- Время создания: Янв 16 2023 г., 07:03
+-- Время создания: Янв 16 2023 г., 10:31
 -- Версия сервера: 10.10.2-MariaDB-1:10.10.2+maria~ubu2204
 -- Версия PHP: 8.0.19
 
@@ -34,6 +34,13 @@ CREATE TABLE `catalog` (
   `filename` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Дамп данных таблицы `catalog`
+--
+
+INSERT INTO `catalog` (`id`, `title`, `category`, `filename`) VALUES
+(1, 'Java. Полное руководство. 10-е изд (Шилдт Герберт)', 2, 'https://ozon.ru/t/ppY3azp');
+
 -- --------------------------------------------------------
 
 --
@@ -44,6 +51,14 @@ CREATE TABLE `category` (
   `id` int(11) NOT NULL,
   `category_name` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `category`
+--
+
+INSERT INTO `category` (`id`, `category_name`) VALUES
+(1, 'Фэнтези'),
+(2, 'Техническая литература');
 
 -- --------------------------------------------------------
 
@@ -88,13 +103,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `catalog`
 --
 ALTER TABLE `catalog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
