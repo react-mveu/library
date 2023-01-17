@@ -404,3 +404,9 @@ html, body {
     width: 200px;
 }
 
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid black;
+}

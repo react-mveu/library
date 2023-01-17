@@ -11,16 +11,28 @@
             <main class="content">
                 <!-- for-example -->
                 <p style="text-align: center; font-size: 30px; margin: 0; padding: 1.5em 0;">Книги категории <?php echo $category_out['category_name'] ?>:</p>
-                <ul>
-                    <?php
-
-                    while ($out_cat = mysqli_fetch_array($run_out_cat)) {
-                        echo "
-                            <li><a href=$out_cat[filename] style='text-align: center; font-size: 20px; margin: 0; padding: 1.5em 0;'>
-                                $out_cat[title]
-                            </a></li>
-                        ";
-                    }
-                    ?>
-                </ul>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Обложка</th>
+                            <th>Название</th>
+                            <th>Год</th>
+                            <th>Ссылка</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        while ($out_cat = mysqli_fetch_array($run_out_cat)) {
+                            echo "
+                                <tr>
+                                    <td><img src=/images/$out_cat[picture] alt=Обложка книги height=150px></td>
+                                    <td><p align=center>$out_cat[title]</p></td>
+                                    <td><p align=center>$out_cat[year]</p></td>
+                                    <td><a href=$out_cat[filename]>Ссылка</a></td>
+                                </tr>
+                            ";
+                        }
+                        ?>
+                    </tbody>
+                </table>
             </main>
