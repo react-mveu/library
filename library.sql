@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: mysql-server
--- Время создания: Янв 17 2023 г., 07:09
+-- Время создания: Янв 17 2023 г., 08:22
 -- Версия сервера: 10.10.2-MariaDB-1:10.10.2+maria~ubu2204
 -- Версия PHP: 8.0.19
 
@@ -31,6 +31,7 @@ CREATE TABLE `catalog` (
   `id` int(11) NOT NULL,
   `title` text NOT NULL,
   `category` int(11) NOT NULL,
+  `year` year(4) NOT NULL,
   `filename` text NOT NULL,
   `picture` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -39,8 +40,8 @@ CREATE TABLE `catalog` (
 -- Дамп данных таблицы `catalog`
 --
 
-INSERT INTO `catalog` (`id`, `title`, `category`, `filename`, `picture`) VALUES
-(1, 'Java. Полное руководство. 10-е изд (Шилдт Герберт)', 2, 'https://ozon.ru/t/ppY3azp', 'schildt.png');
+INSERT INTO `catalog` (`id`, `title`, `category`, `year`, `filename`, `picture`) VALUES
+(1, 'Java. Полное руководство. 10-е изд (Шилдт Герберт)', 2, 2018, 'https://ozon.ru/t/ppY3azp', 'schildt.png');
 
 -- --------------------------------------------------------
 
