@@ -1,5 +1,5 @@
 <?php
-    include "controllers/db.php"
+    $connect = mysqli_connect('mysql-server', 'root', 'qwerty', 'library');
 ?>
 <!DOCTYPE html>
 <html lang="ru">
