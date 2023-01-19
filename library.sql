@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: mysql-server
--- Время создания: Янв 17 2023 г., 08:22
+-- Время создания: Янв 19 2023 г., 06:33
 -- Версия сервера: 10.10.2-MariaDB-1:10.10.2+maria~ubu2204
 -- Версия PHP: 8.0.19
 
@@ -75,6 +75,13 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(1, 'admin', 'admin');
+
+--
 -- Индексы сохранённых таблиц
 --
 
@@ -117,7 +124,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
