@@ -407,8 +407,7 @@ html, body {
 table {
   table-layout: fixed;
   width: 100%;
-  border-collapse: collapse;
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 .content-login {
