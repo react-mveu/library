@@ -414,3 +414,8 @@ table {
   width: 100%;
   float: left;
 }
+
+.login-form {
+  float: left;
+  margin-left: 43%;
+}

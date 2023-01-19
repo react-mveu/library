@@ -1,5 +1,7 @@
 <?php
-    include "adminka/controllers/db.php";
+    error_reporting(E_ERROR | E_PARSE);
+    session_start();
+    include "controllers/db.php";
 ?>
 <!DOCTYPE html>
 <html lang="ru">
