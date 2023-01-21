@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: mysql-server
--- Время создания: Янв 19 2023 г., 06:33
+-- Время создания: Янв 21 2023 г., 08:16
 -- Версия сервера: 10.10.2-MariaDB-1:10.10.2+maria~ubu2204
 -- Версия PHP: 8.0.19
 
@@ -31,7 +31,7 @@ CREATE TABLE `catalog` (
   `id` int(11) NOT NULL,
   `title` text NOT NULL,
   `category` int(11) NOT NULL,
-  `year` year(4) NOT NULL,
+  `year` int(4) NOT NULL,
   `filename` text NOT NULL,
   `picture` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -41,7 +41,8 @@ CREATE TABLE `catalog` (
 --
 
 INSERT INTO `catalog` (`id`, `title`, `category`, `year`, `filename`, `picture`) VALUES
-(1, 'Java. Полное руководство. 10-е изд (Шилдт Герберт)', 2, 2018, 'https://ozon.ru/t/ppY3azp', 'schildt.png');
+(1, 'Java. Полное руководство. 10-е изд (Шилдт Герберт)', 2, 2018, 'https://ozon.ru/t/ppY3azp', 'schildt.png'),
+(2, 'Поэмы (Пушкин)', 3, 1837, 'https://bookprose.ru/produce/pushkin-poemy/', 'pushkin.jpg');
 
 -- --------------------------------------------------------
 
@@ -59,8 +60,8 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `category_name`) VALUES
-(1, 'Фэнтези'),
-(2, 'Техническая литература');
+(2, 'Техническая литература'),
+(3, 'Классическая литература');
 
 -- --------------------------------------------------------
 
@@ -112,13 +113,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `catalog`
 --
 ALTER TABLE `catalog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
