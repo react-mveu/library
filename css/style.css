@@ -464,3 +464,51 @@ table {
   font-size: 18px;
   
 }
+
+.nav {
+  text-align: center;
+  }
+  .nav a {
+  text-decoration: none;
+  display: block;
+  transition: .5s linear;
+  }
+  .nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+  .topmenu > li {
+  display: block;
+  /*Если вместо block задать inline-block,
+  меню будет горизонтальным*/
+  position: relative;
+  }
+  .topmenu > li > a {
+  border: 1px solid #999;
+  }
+  .submenu {
+  position: absolute;
+  left: 200px;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: .5s ease-in-out;
+  }
+  .submenu li {
+  position: relative;
+  border: 1px solid #999;
+  margin:2px;
+  }
+  .submenu a {
+  background: #FFD399;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  }
+  .nav li:hover > .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0px);
+  }
