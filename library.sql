@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: mysql-server
--- Время создания: Фев 05 2023 г., 16:13
+-- Время создания: Фев 05 2023 г., 17:23
 -- Версия сервера: 10.10.2-MariaDB-1:10.10.2+maria~ubu2204
 -- Версия PHP: 8.0.19
 
@@ -42,7 +42,8 @@ CREATE TABLE `catalog` (
 
 INSERT INTO `catalog` (`id`, `title`, `category`, `year`, `filename`, `picture`) VALUES
 (1, 'Java. Полное руководство. 10-е изд (Шилдт Герберт)', 2, 2018, 'https://ozon.ru/t/ppY3azp', 'schildt.png'),
-(2, 'Поэмы (Пушкин)', 3, 1837, 'https://bookprose.ru/produce/pushkin-poemy/', 'pushkin.jpg');
+(2, 'Поэмы (Пушкин)', 3, 1837, 'https://bookprose.ru/produce/pushkin-poemy/', 'pushkin.jpg'),
+(3, '\"Пальто\" Гоголя', 3, 1842, 'https://www.labirint.ru/books/627597/', 'Gogol_Palto.jpg');
 
 -- --------------------------------------------------------
 
@@ -81,7 +82,7 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `name`, `text`, `date`) VALUES
-(1, 'Привет, мир!', 'Это тестовая запись.', '2023-02-05');
+(2, 'Новая книга!', 'Представляем вам новую книгу \"Пальто!\"', '2023-02-05');
 
 -- --------------------------------------------------------
 
@@ -139,7 +140,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `catalog`
 --
 ALTER TABLE `catalog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `category`
@@ -151,7 +152,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT для таблицы `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
