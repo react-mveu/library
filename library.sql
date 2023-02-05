@@ -74,7 +74,7 @@ CREATE TABLE `news` (
   `id` int(11) NOT NULL,
   `name` text NOT NULL,
   `text` text NOT NULL,
-  `date` date NOT NULL DEFAULT current_timestamp()
+  `date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -82,7 +82,7 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `name`, `text`, `date`) VALUES
-(2, 'Новая книга!', 'Представляем вам новую книгу \"Пальто!\"', '2023-02-05');
+(2, 'Новая книга!', 'Представляем вам новую книгу \"Пальто!\"', '2023-02-05 00:00:00');
 
 -- --------------------------------------------------------
 
