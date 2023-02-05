@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: mysql-server
--- Время создания: Фев 05 2023 г., 15:57
+-- Время создания: Фев 05 2023 г., 16:13
 -- Версия сервера: 10.10.2-MariaDB-1:10.10.2+maria~ubu2204
 -- Версия PHP: 8.0.19
 
@@ -72,15 +72,16 @@ INSERT INTO `category` (`id`, `category_name`) VALUES
 CREATE TABLE `news` (
   `id` int(11) NOT NULL,
   `name` text NOT NULL,
-  `text` text NOT NULL
+  `text` text NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Дамп данных таблицы `news`
 --
 
-INSERT INTO `news` (`id`, `name`, `text`) VALUES
-(1, 'Привет, мир!', 'Это тестовая запись.');
+INSERT INTO `news` (`id`, `name`, `text`, `date`) VALUES
+(1, 'Привет, мир!', 'Это тестовая запись.', '2023-02-05');
 
 -- --------------------------------------------------------
 
