@@ -2,7 +2,7 @@
                 <p style="text-align: center;"><a href="/">Главная</a></p>
                 <div class="nav">
                     <ul class="topmenu">
-                        <li><a href="#">Категории</a>
+                        <li><a href="">Категории</a>
                             <ul class="submenu">
                                 <?php
                                 $str_out_cat = "SELECT * FROM `category`";
@@ -17,6 +17,9 @@
                                 }
                                 ?>
                             </ul>
+                        </li>
+                        <li>
+                            <a href="contacts.php">Контакты</a>
                         </li>
                     </ul>
                 </div>

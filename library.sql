@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: mysql-server
--- Время создания: Янв 21 2023 г., 08:16
+-- Время создания: Фев 05 2023 г., 15:57
 -- Версия сервера: 10.10.2-MariaDB-1:10.10.2+maria~ubu2204
 -- Версия PHP: 8.0.19
 
@@ -66,6 +66,25 @@ INSERT INTO `category` (`id`, `category_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `news`
+--
+
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `text` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Дамп данных таблицы `news`
+--
+
+INSERT INTO `news` (`id`, `name`, `text`) VALUES
+(1, 'Привет, мир!', 'Это тестовая запись.');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `users`
 --
 
@@ -100,6 +119,12 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `news`
+--
+ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
@@ -120,6 +145,12 @@ ALTER TABLE `catalog`
 --
 ALTER TABLE `category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT для таблицы `news`
+--
+ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `users`
