@@ -5,7 +5,7 @@
         <div class="reg_form">
             <form method="POST">
                 <input type="text" name="name" placeholder="Заголовок">
-                <input type="text" name="text_news" placeholder="Текст новости">
+                <textarea name="text_news" placeholder="Текст новости"></textarea>
                 <input type="submit" name="add" value="Добавить">
             </form>
         </div>
@@ -22,34 +22,25 @@
             }
         }
         ?>
-        <table>
-            <tr>
-                <th>№ п/п</th>
-                <th>Наименование</th>
-                <th>Дата</th>
-                <th>Действия</th>
-            </tr>
-
+        <div class="boxes">
             <?php
             $str_out_news = "SELECT * FROM `news`";
             $run_out_news = mysqli_query($connect, $str_out_news);
             while ($out_news = mysqli_fetch_array($run_out_news)) {
 
                 echo "
-                        
-                        <tr>
-                            <td>$out_news[id]</td>
-                            <td>$out_news[name]</td>
-                            <td>$out_news[date]</td>
-                            <td>
+                        <div class='box'>
+                            <p>ID: $out_news[id]</p>
+                            <p>Название: $out_news[name]</p>
+                            <p>Дата: $out_news[date]</p>
+                            <p>
                                 <a href='controllers/del.php?del_news=$out_news[id]' class=delete>
                                     Удалить
                                 </a>	
-                            </td>
-                        </tr>
-                        
+                            </p>
+                        </div>
                         ";
             }
             ?>
-        </table>
+        </div>
     </main>

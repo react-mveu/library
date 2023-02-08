@@ -51,16 +51,7 @@
         }
 
         ?>
-
-        <table>
-            <tr>
-                <th>№ п/п</th>
-                <th>Название</th>
-                <th>Год</th>
-                <th>Категория</th>
-                <th>Действия</th>
-            </tr>
-
+        <div class="boxes">
             <?php
             $str_out_book = "SELECT * FROM `catalog` WHERE category=$cat";
             $run_out_book = mysqli_query($connect, $str_out_book);
@@ -70,22 +61,19 @@
                 $out_cat_book = mysqli_fetch_array($run_out_cat_book);
 
                 echo "
-                        
-                        <tr>
-                        <td>$out_book[id]</td>
-                        <td>$out_book[title]</td>
-                        <td>$out_book[year]</td>
-                        <td>$out_cat_book[category_name]</td>
-                        <td>
-                            <a href=controllers/del.php?del_book=$out_book[id] class=delete>
-                                Удалить
-                            </a>	
-                        </td>
-                        </tr>
-                        
+                        <div class='box'>
+                            <p>ID: $out_book[id]</p>
+                            <p>Название: $out_book[title]</p>
+                            <p>Год: $out_book[year]</p>
+                            <p>Категория: $out_cat_book[category_name]</p>
+                            <p>
+                                <a href=controllers/del.php?del_book=$out_book[id] class=delete>
+                                    Удалить
+                                </a>	
+                            </p>
+                        </div>
                         ";
             }
             ?>
-        </table>
-
+        </div>
     </main>

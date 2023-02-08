@@ -1,3 +1,3 @@
 <?php
 
-$connect = mysqli_connect('mysql-server', 'root', 'qwerty', 'library');
+$connect = mysqli_connect('localhost', 'root', '', 'library');

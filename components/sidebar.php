@@ -1,5 +1,5 @@
             <aside class="sidebar sidebar1">
-                <p style="text-align: center;"><a href="/">Главная</a></p>
+                <p style="text-align: center;"><a href="index.php">Главная</a></p>
                 <div class="nav">
                     <ul class="topmenu">
                         <li><a href="">Категории</a>

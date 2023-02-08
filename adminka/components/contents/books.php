@@ -18,38 +18,29 @@
             }
         }
         ?>
-        <table>
-            <tr>
-                <th>№ п/п</th>
-                <th>Наименование</th>
-                <th>Книги в этой категории</th>
-                <th>Действия</th>
-            </tr>
-
+        <div class="boxes">
             <?php
             $str_out_cat = "SELECT * FROM `category`";
             $run_out_cat = mysqli_query($connect, $str_out_cat);
             while ($out_cat = mysqli_fetch_array($run_out_cat)) {
 
                 echo "
-                        
-                        <tr>
-                            <td>$out_cat[id]</td>
-                            <td>$out_cat[category_name]</td>
-                            <td>
-                                <a href='category.php?cat=$out_cat[id]' class=books>
-                                    Перейти
-                                </a>	
-                            </td>
-                            <td>
-                                <a href='controllers/del.php?del_cat=$out_cat[id]' class=delete>
-                                    Удалить
-                                </a>	
-                            </td>
-                        </tr>
-                        
-                        ";
+                            <div class='box'>
+                                <p>ID: $out_cat[id]</p>
+                                <p>Название: $out_cat[category_name]</p>
+                                <p>
+                                    <a href='category.php?cat=$out_cat[id]' class=book-link>
+                                        Перейти
+                                    </a>	
+                                </p>
+                                <p>
+                                    <a href='controllers/del.php?del_cat=$out_cat[id]' class=delete>
+                                        Удалить
+                                    </a>	
+                                </p>
+                            </div>
+                            ";
             }
             ?>
-        </table>
+        </div>
     </main>
