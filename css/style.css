@@ -371,7 +371,7 @@ html, body {
 }
 
 .header {
-    height: 200px;
+    height: 300px;
     background: #6CAEDD;
     color: #fff;
     border-radius: 10px;
@@ -562,3 +562,68 @@ a {
   .boxes {
     display: flex;
   }
+
+.auth
+{
+  display: inline-block;
+  width: 260px;
+  height: 130px;
+  text-align: center;
+  float: right;
+  margin-top: -50px;
+  margin-right: 30px;
+}
+
+.auth input
+{
+  width: 260px;
+  height: 30px;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  padding: 0px 10px;
+  border-radius: 10px;
+}
+
+.auth input[type="submit"]
+{
+  width: 260px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #6CAEDD;
+}
+
+.profile
+{
+  display: flex;
+  margin-left: 50px;
+}
+.menu_prof
+{
+  width: 150px;
+  height: 400px;
+  text-align: center;
+}
+.menu_prof > a
+{
+  display: block;
+  margin-bottom: 10px;
+  color: black;
+}
+.value_profile
+{
+  width: 800px;
+  height: 400px;
+  text-align: center;
+}
+
+.value_profile > table
+{
+  margin: 0px auto;
+  text-align: left;
+}
+.value_profile > img
+{
+  margin-bottom: 20px;
+}

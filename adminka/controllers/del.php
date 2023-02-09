@@ -4,6 +4,7 @@
     $del_cat = $_GET['del_cat'];
     $del_book = $_GET['del_book'];
     $del_news = $_GET['del_news'];
+    $del_user = $_GET['del_user'];
     if ($del_cat) {
         $del_id = $del_cat;
         $table = 'category';
@@ -16,6 +17,10 @@
         $del_id = $del_news;
         $table = 'news';
         $file = 'news.php';
+    } elseif ($del_user) {
+        $del_id = $del_user;
+        $table = 'users';
+        $file = 'users.php';
     }
     $str_del_cat = "DELETE FROM `$table` WHERE id=$del_id";
     $run_del_cat = mysqli_query($connect, $str_del_cat);

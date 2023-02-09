@@ -19,9 +19,15 @@
                                     <img src=images/$out_cat[picture] alt=Обложка книги height=150px>
                                     <p align=center>Название: $out_cat[title]</p>
                                     <p align=center>Год: $out_cat[year]</p>
-                                    <p><a href=$out_cat[filename] class='book-link'>Ссылка</a></p>
-                                </div>
                             ";
+                            if ($_SESSION['client']) {
+                                echo "
+                                    <form action=adminka/controllers/orders.php?book_id=$out_cat[id] method=POST>
+                                        <input type=submit name=buy value=Купить>
+                                    </form>
+                                ";
+                            }
+                            echo "</div>";
                         }
                         ?>
                     </div>
