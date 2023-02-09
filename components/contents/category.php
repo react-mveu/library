@@ -16,9 +16,9 @@
                         while ($out_cat = mysqli_fetch_array($run_out_cat)) {
                             echo "
                                 <div class='box'>
-                                    <p><img src=images/$out_cat[picture] alt=Обложка книги height=150px></ul>
-                                    <p><p align=center>Название: $out_cat[title]</p></li>
-                                    <p><p align=center>Год: $out_cat[year]</p></p>
+                                    <img src=images/$out_cat[picture] alt=Обложка книги height=150px>
+                                    <p align=center>Название: $out_cat[title]</p>
+                                    <p align=center>Год: $out_cat[year]</p>
                                     <p><a href=$out_cat[filename] class='book-link'>Ссылка</a></p>
                                 </div>
                             ";
