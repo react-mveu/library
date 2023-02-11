@@ -23,7 +23,7 @@
                             if ($_SESSION['client']) {
                                 echo "
                                     <form action=adminka/controllers/orders.php?book_id=$out_cat[id] method=POST>
-                                        <input type=submit name=buy value=Купить>
+                                        <input type=submit name=buy value=Заказать>
                                     </form>
                                 ";
                             }
