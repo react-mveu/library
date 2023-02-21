@@ -3,6 +3,13 @@
             <font color="green"><?php $_SESSION['message']?></font>
             <font color="red"><?php $_SESSION['error']?></font>
             <p style="text-align: center; font-size: 30px; margin: 0; padding: 1.5em 0;">Регистрация</p>
+            <?php
+            echo "<p>$_SESSION[message_reg]</p>";
+            echo "<p style='color: red'>$_SESSION[error_reg]</p>";
+            if ($_SESSION['message_reg'] || $_SESSION['error_reg']) {
+                session_unset();
+            }
+            ?>
             <div class="reg_form">
                 <form method="POST" action="adminka/controllers/registration.php" enctype="multipart/form-data">
                     <input type="text" name="surname" placeholder="Фамилия">

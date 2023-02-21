@@ -21,36 +21,36 @@ if ($surname AND $name AND $l_name AND $login AND $pass AND $repass AND $phone) 
         $run_add_user = mysqli_query($connect, $str_add_user);
         if ($run_add_user) {
             if ($add_user) {
-                $_SESSION['message'] = "Вы успешно добавили пользователя!";
+                $_SESSION['message_reg'] = "Вы успешно добавили пользователя!";
                 header("Location:../users.php");
             } elseif ($reg) {
-                $_SESSION['message'] = "Вы успешно зарегистрировались!";
+                $_SESSION['message_reg'] = "Вы успешно зарегистрировались!";
                 header("Location:../../registration.php");
             }
         } else {
             if ($add_user) {
-                $_SESSION['error'] = "Ошибка добавления пользователя!";
+                $_SESSION['error_reg'] = "Ошибка добавления пользователя!";
                 header("Location:../users.php");
             } elseif ($reg) {
-                $_SESSION['error'] = "Ошибка регистрации!";
+                $_SESSION['error_reg'] = "Ошибка регистрации!";
                 header("Location:../../registration.php");
             }
         }
     } else {
         if ($add_user) {
-            $_SESSION['error'] = "Не совпадают пароли!";
+            $_SESSION['error_reg'] = "Не совпадают пароли!";
             header("Location:../users.php");
         } elseif ($reg) {
-            $_SESSION['error'] = "Не совпадают пароли!";
+            $_SESSION['error_reg'] = "Не совпадают пароли!";
             header("Location:../../registration.php");
         }
     }
 } else {
     if ($add_user) {
-        $_SESSION['error'] = "Заполните все поля!";
+        $_SESSION['error_reg'] = "Заполните все поля!";
         header("Location:../users.php");
     } elseif ($reg) {
-        $_SESSION['error'] = "Заполните все поля!";
+        $_SESSION['error_reg'] = "Заполните все поля!";
         header("Location:../../registration.php");
     }
 }
