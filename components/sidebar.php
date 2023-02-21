@@ -1,7 +1,7 @@
             <aside class="sidebar sidebar1">
-                <p style="text-align: center;"><a href="index.php">Главная</a></p>
                 <div class="nav">
                     <ul class="topmenu">
+                        <li><a href="index.php" style="margin-top: 10px">Главная</a></li>
                         <li><a href="">Категории</a>
                             <ul class="submenu">
                                 <?php
