@@ -2,6 +2,13 @@
     <main class="content">
         <!-- for-example -->
         <p style="text-align: center; font-size: 30px; margin: 0; padding: 1.5em 0;">Категория:</p>
+        <?php
+        echo "<p>$_SESSION[message_ch_news]</p>";
+        echo "<p style='color: red'>$_SESSION[error_ch_news]</p>";
+        if ($_SESSION['message_ch_news'] || $_SESSION['error_ch_news']) {
+            session_unset();
+        }
+        ?>
         <div class="reg_form">
             <form method="POST">
                 <input type="text" name="name" placeholder="Заголовок">

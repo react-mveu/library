@@ -6,6 +6,13 @@
     <main class="content">
         <!-- for-example -->
         <p style="text-align: center; font-size: 30px; margin: 0; padding: 1.5em 0;">Книги:</p>
+        <?php
+        echo "<p>$_SESSION[message_ch_book]</p>";
+        echo "<p style='color: red'>$_SESSION[error_ch_book]</p>";
+        if ($_SESSION['message_ch_book'] || $_SESSION['error_ch_book']) {
+            session_unset();
+        }
+        ?>
         <div class="reg_form">
             <form method="POST" enctype="multipart/form-data">
                 <input type="text" name="name_book" placeholder="Наименование книги">
