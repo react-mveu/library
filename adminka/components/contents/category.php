@@ -67,6 +67,11 @@
                             <p>Год: $out_book[year]</p>
                             <p>Категория: $out_cat_book[category_name]</p>
                             <p>
+                                <a href='change_book.php?book=$out_book[id]' class=book-link>
+                                    Изменить
+                                </a>	
+                            </p>
+                            <p>
                                 <a href=controllers/del.php?del_book=$out_book[id] class=delete>
                                     Удалить
                                 </a>	

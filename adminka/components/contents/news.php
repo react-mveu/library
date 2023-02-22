@@ -34,6 +34,11 @@
                             <p>Название: $out_news[name]</p>
                             <p>Дата: $out_news[date]</p>
                             <p>
+                                <a href='change_news.php?news=$out_news[id]' class=book-link>
+                                    Изменить
+                                </a>	
+                            </p>
+                            <p>
                                 <a href='controllers/del.php?del_news=$out_news[id]' class=delete>
                                     Удалить
                                 </a>	
