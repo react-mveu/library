@@ -2,6 +2,13 @@
     <main class="content">
         <!-- for-example -->
         <p style="text-align: center; font-size: 30px; margin: 0; padding: 1.5em 0;">Пользователи:</p>
+        <?php
+        echo "<p>$_SESSION[message_ch_user]</p>";
+        echo "<p style='color: red'>$_SESSION[error_ch_user]</p>";
+        if ($_SESSION['message_ch_user'] || $_SESSION['error_ch_user']) {
+            session_unset();
+        }
+        ?>
         <div class="boxes">
             <?php
             $str_out_users = "SELECT * FROM `users` WHERE role=1";
@@ -19,7 +26,7 @@
                                 </a>	
                             </p>
                             <p>
-                                <a href=controllers/change_user.php?user=$out_users[id] class=book-link>
+                                <a href=change_user.php?user=$out_users[id] class=book-link>
                                     Изменить
                                 </a>	
                             </p>
