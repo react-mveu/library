@@ -7,7 +7,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=10">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
     <title>Библиотека</title>    
     <link rel="stylesheet" href="../css/style.css">
 </head>
